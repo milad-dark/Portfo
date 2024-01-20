@@ -404,8 +404,8 @@ body.dark-theme{
 }
 
 /* Hide and show projects & skills */
-.filters [data-content] {
-    display: none;
+.hidden{
+    display: none !important;
 }
 
 .filters__sections .filters-active [data-content] {
