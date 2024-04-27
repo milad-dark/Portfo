@@ -174,7 +174,7 @@ body.dark-theme {
 }
 
 .profile__prefil img {
-    width: 75px;
+    width: 100%;
 }
 
 .profile__border {
@@ -383,7 +383,7 @@ body.dark-theme {
 
 .skills__group {
     display: grid;
-    align-content: flex-end;
+    /* align-content: flex-end; */
     column-gap: 1rem;
 }
 
@@ -450,6 +450,12 @@ body.dark-theme {
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 320px) {
+    .projects__content {
+        grid-template-columns: repeat(1,332px);
+        grid-template-rows: repeat(5,360px);
+        justify-content: center;
+    }
+
     .container {
         margin-left: 1rem;
         margin-right: 1rem;
@@ -472,7 +478,8 @@ body.dark-theme {
 /* For medium devices */
 @media screen and (min-width: 576px) {
     .projects__content {
-        grid-template-columns: 332px;
+        grid-template-columns: repeat(1,332px);
+        grid-template-rows: repeat(3,360px);
         justify-content: center;
     }
 
@@ -484,7 +491,10 @@ body.dark-theme {
 }
 
 @media screen and (min-width: 776px){
-    .projects__content,
+    .projects__content {
+        grid-template-columns: repeat(2,332px);
+        grid-template-rows: repeat(3,360px);
+    }
     .skills__content {
         grid-template-columns: repeat(2,332px);
     }
@@ -498,6 +508,7 @@ body.dark-theme {
 @media screen and (min-width: 992px){
     .projects__content {
         grid-template-columns: repeat(3,300px);
+        grid-template-rows: repeat(3,340px);
     }
     .skills__content {
         grid-template-columns: repeat(2,300px);
